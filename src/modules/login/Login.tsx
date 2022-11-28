@@ -9,8 +9,10 @@ import {CommonStyles} from "~/core/theme/commonStyles";
 import {useLazyLoginQuery} from "~/api/auth";
 import {getTabsRootLayout} from "~/navigation/roots";
 import {navigation} from "~/services";
+import {useAppSelector} from "~/core/store/store";
 
 export const Login: NavigationFunctionComponent = (): JSX.Element => {
+    const accessToken = useAppSelector((store) => store.login.accessToken)
 
     const {control, watch, formState: {errors}} = useForm({
         defaultValues: {
@@ -24,15 +26,22 @@ export const Login: NavigationFunctionComponent = (): JSX.Element => {
         password: watch("password"),
     };
 
+    console.log(user);
+
     const [login] = useLazyLoginQuery();
 
     const onSubmit = useCallback(async (data: {email: string; password: string}) => {
-        const accessToken = await login(data).unwrap();
-        if (accessToken) {
-            navigation.setRoot(getTabsRootLayout("light"));
-        }
+        await login(data).unwrap();
     },[login]);
 
+    const onPress = async () => {
+        await onSubmit(user);
+        console.log(accessToken)
+        if (accessToken) {
+            console.log('pressed')
+            navigation.setRoot(getTabsRootLayout("light"));
+        }
+    }
 
     return (
         <View style={CommonStyles.flex1}>
@@ -81,7 +90,7 @@ export const Login: NavigationFunctionComponent = (): JSX.Element => {
 
                         <PrimaryButton
                             text='Войти'
-                            onPress={async () =>onSubmit(user)}
+                            onPress={async () =>onPress()}
                             type={ButtonType.solid}
                             style={CommonStyles.button}
                         />
