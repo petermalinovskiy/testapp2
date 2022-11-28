@@ -3,6 +3,7 @@ import {TextInput, StyleSheet, View, Text, ImageBackground, ImageURISource} from
 import React, {useCallback, useState} from "react";
 import { useForm, Controller } from "react-hook-form";
 import {Colors} from "~/core/theme/colors";
+import LinearGradient from "react-native-linear-gradient";
 import {PrimaryButton} from "~/common/components/PrimaryButton";
 import {ButtonType} from "~/types";
 import {CommonStyles} from "~/core/theme/commonStyles";
@@ -43,68 +44,70 @@ export const Registration: NavigationFunctionComponent = (): JSX.Element => {
             console.log('failure')
         }
     }
-        
+
    return (
         <View style={CommonStyles.flex1}>
             <ImageBackground source={require('../../../resources/images/bg_image.png')} resizeMode='cover' style={CommonStyles.flex1}>
-                <View style={styles.root}>
-                    <Text style={CommonStyles.logo}>CoffeTime</Text>
-                    <ImageCropPickerButton
-                        image={photo}
-                        onRemoveImage={onRemoveImage}
-                        onImagePicked={() => onImagePicked}
-                        onPickerError={console.error}
-                        iconStyle={iconStyle}
-                        imageStyle={styles.cropPicker}
-                        style={styles.cropPicker}
-                    />
-                    <View>
-                        <Controller
-                            control={control}
-                            rules={{
-                                required: true,
-                            }}
-                            render={({ field: { onChange, onBlur, value } }) => (
-                                <TextInput
-                                    onBlur={onBlur}
-                                    onChangeText={onChange}
-                                    value={value}
-                                    style={CommonStyles.textInput}
-                                    placeholder="email"
-                                    placeholderTextColor={Colors.white}
-                                />
-                            )}
-                            name="email"
+                <LinearGradient colors={["rgba(0,0,0, 0.1)", "rgba(243,233,216, 0.79)"]} style={CommonStyles.flex1}>
+                    <View style={styles.root}>
+                        <Text style={CommonStyles.logo}>CoffeTime</Text>
+                        <ImageCropPickerButton
+                            image={photo}
+                            onRemoveImage={onRemoveImage}
+                            onImagePicked={() => onImagePicked}
+                            onPickerError={console.error}
+                            iconStyle={iconStyle}
+                            imageStyle={styles.cropPicker}
+                            style={styles.cropPicker}
                         />
-                        {errors.email && <Text>This is required.</Text>}
+                        <View>
+                            <Controller
+                                control={control}
+                                rules={{
+                                    required: true,
+                                }}
+                                render={({ field: { onChange, onBlur, value } }) => (
+                                    <TextInput
+                                        onBlur={onBlur}
+                                        onChangeText={onChange}
+                                        value={value}
+                                        style={CommonStyles.textInput}
+                                        placeholder="email"
+                                        placeholderTextColor={Colors.white}
+                                    />
+                                )}
+                                name="email"
+                            />
+                            {errors.email && <Text style={styles.formTextError}>Обязятельное поле</Text>}
 
-                        <Controller
-                            control={control}
-                            rules={{
-                                required: true,
-                            }}
-                            render={({ field: { onChange, onBlur, value } }) => (
-                                <TextInput
-                                    onBlur={onBlur}
-                                    onChangeText={onChange}
-                                    value={value}
-                                    style={CommonStyles.textInput}
-                                    placeholder="пароль"
-                                    placeholderTextColor={Colors.white}
-                                />
-                            )}
-                            name="password"
-                        />
-                        {errors.password && <Text>This is required.</Text>}
+                            <Controller
+                                control={control}
+                                rules={{
+                                    required: true,
+                                }}
+                                render={({ field: { onChange, onBlur, value } }) => (
+                                    <TextInput
+                                        onBlur={onBlur}
+                                        onChangeText={onChange}
+                                        value={value}
+                                        style={CommonStyles.textInput}
+                                        placeholder="пароль"
+                                        placeholderTextColor={Colors.white}
+                                    />
+                                )}
+                                name="password"
+                            />
+                            {errors.password && <Text style={styles.formTextError}>Обязятельное поле</Text>}
 
-                        <PrimaryButton
-                            text='Зарегистрироваться'
-                            type={ButtonType.solid}
-                            onPress={handleSubmit(onSubmit)}
-                            style={CommonStyles.greenButton}
-                        />
+                            <PrimaryButton
+                                text='Зарегистрироваться'
+                                type={ButtonType.solid}
+                                onPress={handleSubmit(onSubmit)}
+                                style={CommonStyles.greenButton}
+                            />
+                        </View>
                     </View>
-                </View>
+                </LinearGradient>
             </ImageBackground>
         </View>
     );
@@ -129,5 +132,8 @@ const styles = StyleSheet.create({
     },
     iconTrue: {
         display: "flex"
+    },
+    formTextError: {
+        color: Colors.white
     }
 });

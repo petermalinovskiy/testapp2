@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ImageBackground, Text, TouchableWithoutFeedback, View, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
+import LinearGradient from "react-native-linear-gradient";
 import {Colors} from "~/core/theme/colors";
 import {CommonStyles} from "~/core/theme/commonStyles";
 import {Fonts} from "~/core/theme/fonts";
@@ -21,22 +22,24 @@ export const CafeDescription: AppNavigationComponent<IProps> = ({cafeData}) => {
 
     return (
         <ImageBackground source={{uri: cafeData?.images}} resizeMode="cover" style={styles.mainCafeImage}>
-            <View style={[CommonStyles.rowCenter, styles.cafeDescriptionContainer]}>
-                <View style={{width: '80%'}}>
-                    <Text style={styles.drinkCardName}>{cafeData?.name}</Text>
-                    <Text style={[CommonStyles.text, {fontSize: 18}]}>{cafeData?.address}</Text>
-                </View>
-                <TouchableWithoutFeedback onPress={()=>setLikeToggle(prev=>!prev)}>
-                    <View style={styles.heartContainer} >
-                        <Icon
-                            name={'favorite'}
-                            size={20}
-                            color={likeToggle ? Colors.gray : Colors.primary}
-                            style={[styles.heartButton, (likeToggle ? null : {alignSelf: 'flex-end'})]}
-                        />
+            <LinearGradient colors={["rgba(255, 255, 255, 0.0319)", "rgba(247, 236, 218, 1)"]} locations={[0.5, 1]} style={styles.cafeImageGradient}>
+                <View style={[CommonStyles.rowCenter, styles.cafeDescriptionContainer]}>
+                    <View style={{width: '80%'}}>
+                        <Text style={styles.drinkCardName}>{cafeData?.name}</Text>
+                        <Text style={[CommonStyles.text, {fontSize: 18}]}>{cafeData?.address}</Text>
                     </View>
-                </TouchableWithoutFeedback>
-            </View>
+                    <TouchableWithoutFeedback onPress={()=>setLikeToggle(prev=>!prev)}>
+                        <View style={styles.heartContainer} >
+                            <Icon
+                                name={'favorite'}
+                                size={20}
+                                color={likeToggle ? Colors.gray : Colors.primary}
+                                style={[styles.heartButton, (likeToggle ? null : {alignSelf: 'flex-end'})]}
+                            />
+                        </View>
+                    </TouchableWithoutFeedback>
+                </View>
+            </LinearGradient>
         </ImageBackground>
     );
 };
@@ -77,4 +80,9 @@ const styles = StyleSheet.create({
         borderColor: Colors.gray,
         padding: 5,
     },
+    cafeImageGradient: {
+        flex: 1,
+        justifyContent: 'flex-end',
+        paddingLeft: 15
+    }
 })

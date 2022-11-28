@@ -18,6 +18,7 @@ MERGED from [:react-native-fast-image] D:\Projects\testapp2\node_modules\react-n
 MERGED from [:react-native-gesture-handler] D:\Projects\testapp2\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-image-crop-picker] D:\Projects\testapp2\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-33:12
 MERGED from [:react-native-in-app-review] D:\Projects\testapp2\node_modules\react-native-in-app-review\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-linear-gradient] D:\Projects\testapp2\node_modules\react-native-linear-gradient\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-localize] D:\Projects\testapp2\node_modules\react-native-localize\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-navigation] D:\Projects\testapp2\node_modules\react-native-navigation\lib\android\app\build\intermediates\merged_manifest\reactNative68Debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:react-native-orientation-locker] D:\Projects\testapp2\node_modules\react-native-orientation-locker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
@@ -388,6 +389,8 @@ MERGED from [:react-native-image-crop-picker] D:\Projects\testapp2\node_modules\
 MERGED from [:react-native-image-crop-picker] D:\Projects\testapp2\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-in-app-review] D:\Projects\testapp2\node_modules\react-native-in-app-review\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-in-app-review] D:\Projects\testapp2\node_modules\react-native-in-app-review\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-linear-gradient] D:\Projects\testapp2\node_modules\react-native-linear-gradient\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-linear-gradient] D:\Projects\testapp2\node_modules\react-native-linear-gradient\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-localize] D:\Projects\testapp2\node_modules\react-native-localize\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-localize] D:\Projects\testapp2\node_modules\react-native-localize\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-navigation] D:\Projects\testapp2\node_modules\react-native-navigation\lib\android\app\build\intermediates\merged_manifest\reactNative68Debug\AndroidManifest.xml:5:5-7:41

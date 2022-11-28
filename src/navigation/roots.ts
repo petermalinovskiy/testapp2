@@ -115,7 +115,8 @@ export const bottomTabsLayout = (iconSet: ITabBarIconSet, colors: ThemeColors): 
             title: {
               text: 'CoffeTime',
               fontFamily: Fonts.lobster,
-              alignment: 'center'
+              alignment: 'center',
+
             },
             rightButtons: [
               {

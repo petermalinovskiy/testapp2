@@ -33,6 +33,8 @@ import com.swmansion.gesturehandler.RNGestureHandlerPackage;
 import com.reactnative.ivpusic.imagepicker.PickerPackage;
 // react-native-in-app-review
 import com.ibits.react_native_in_app_review.AppReviewPackage;
+// react-native-linear-gradient
+import com.BV.LinearGradient.LinearGradientPackage;
 // react-native-localize
 import com.zoontek.rnlocalize.RNLocalizePackage;
 // react-native-navigation
@@ -109,6 +111,7 @@ public class PackageList {
       new RNGestureHandlerPackage(),
       new PickerPackage(),
       new AppReviewPackage(),
+      new LinearGradientPackage(),
       new RNLocalizePackage(),
       new NavigationPackage(reactNativeHost),
       new OrientationPackage(),
