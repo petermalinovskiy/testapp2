@@ -1,4 +1,4 @@
-import {NavigationFunctionComponent} from "react-native-navigation";
+import { NavigationFunctionComponent} from "react-native-navigation";
 import {TextInput, StyleSheet, View, Text, ImageBackground} from "react-native";
 import React, {useCallback} from "react";
 import {useForm, Controller} from "react-hook-form";
@@ -6,10 +6,11 @@ import {Colors} from "~/core/theme/colors";
 import {PrimaryButton} from "~/common/components/PrimaryButton";
 import {ButtonType} from "~/types";
 import {CommonStyles} from "~/core/theme/commonStyles";
-import {useLazyLoginQuery } from "~/api/auth";
-import {setTabsRoot} from "../../navigation/roots";
+import {useLazyLoginQuery} from "~/api/auth";
+import {getTabsRootLayout} from "~/navigation/roots";
+import {navigation} from "~/services";
 
-export const Login: NavigationFunctionComponent = (props): JSX.Element => {
+export const Login: NavigationFunctionComponent = (): JSX.Element => {
 
     const {control, watch, formState: {errors}} = useForm({
         defaultValues: {
@@ -23,37 +24,14 @@ export const Login: NavigationFunctionComponent = (props): JSX.Element => {
         password: watch("password"),
     };
 
-    const [login, loginData] = useLazyLoginQuery();
+    const [login] = useLazyLoginQuery();
 
-    /*const onSubmit = useCallback(async (data: {email: string; password: string}) => {
-        const sessionID = await login(data).unwrap();
-        console.log(data);
-        console.log(sessionID);
-        console.log(loginData);
-    },[login]);*/
-
-
-
-    const authorization = async () => {
-        console.log('user111',JSON.stringify(user));
-
-        return fetch('http://ci2.dextechnology.com:8000/api/User/Authorization',{
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(user),
-        })
-            .then((r) => console.log(r))
-            .catch(  (error) => {
-                console.log('error',error);
-            });
-    };
-
-    const onr = () => {authorization()};
-
-
+    const onSubmit = useCallback(async (data: {email: string; password: string}) => {
+        const accessToken = await login(data).unwrap();
+        if (accessToken) {
+            navigation.setRoot(getTabsRootLayout("light"));
+        }
+    },[login]);
 
 
     return (
@@ -103,7 +81,7 @@ export const Login: NavigationFunctionComponent = (props): JSX.Element => {
 
                         <PrimaryButton
                             text='Войти'
-                            onPress={onr}
+                            onPress={async () =>onSubmit(user)}
                             type={ButtonType.solid}
                             style={CommonStyles.button}
                         />

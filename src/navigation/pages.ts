@@ -51,4 +51,16 @@ export const Pages = {
     id: "REGISTRATION_SCREEN",
     name: "RegistrationScreen"
   },
+  cafe: {
+    id: "CAFE_SCREEN",
+    name: "CafeScreen"
+  },
+  drink: {
+    id: "DRINK_SCREEN",
+    name: "DrinkScreen"
+  },
+  favorite: {
+    id: "FAVORITE_SCREEN",
+    name: "FavoriteScreen"
+  },
 };

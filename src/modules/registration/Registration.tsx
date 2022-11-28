@@ -7,8 +7,9 @@ import {PrimaryButton} from "~/common/components/PrimaryButton";
 import {ButtonType} from "~/types";
 import {CommonStyles} from "~/core/theme/commonStyles";
 import {ImageCropPickerButton} from "~/common/components/ImageCropPickerButton";
+import {useRegistrationMutation} from "~/api/auth";
 
-export const Registration: NavigationFunctionComponent = (props): JSX.Element => {
+export const Registration: NavigationFunctionComponent = (): JSX.Element => {
 
     const { control, handleSubmit, formState: { errors } } = useForm({
         defaultValues: {
@@ -24,7 +25,7 @@ export const Registration: NavigationFunctionComponent = (props): JSX.Element =>
     }, [setPhoto]);
 
     const onImagePicked = useCallback(
-        (nextImage) => {
+        (nextImage: any) => {
             setPhoto({uri: nextImage.path});
         },
         [setPhoto],
@@ -32,10 +33,18 @@ export const Registration: NavigationFunctionComponent = (props): JSX.Element =>
 
     const iconStyle = photo ? styles.iconNone : styles.iconTrue
 
-    const onSubmit = (data) => console.log(data);
+    const [getRegistred, {isSuccess}] = useRegistrationMutation()
 
-    // @ts-ignore
-    return (
+    const onSubmit =  async (data: {email: string, password: string}) => {
+        getRegistred(data).unwrap()
+        if (isSuccess) {
+            console.log('success')
+        } else {
+            console.log('failure')
+        }
+    }
+        
+   return (
         <View style={CommonStyles.flex1}>
             <ImageBackground source={require('../../../resources/images/bg_image.png')} resizeMode='cover' style={CommonStyles.flex1}>
                 <View style={styles.root}>

@@ -25,6 +25,7 @@ MERGED from [:react-native-permissions] D:\Projects\testapp2\node_modules\react-
 MERGED from [:react-native-push-notification] D:\Projects\testapp2\node_modules\react-native-push-notification\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-share] D:\Projects\testapp2\node_modules\react-native-share\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-21:12
 MERGED from [:react-native-svg] D:\Projects\testapp2\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-vector-icons] D:\Projects\testapp2\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-webview] D:\Projects\testapp2\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-21:12
 MERGED from [:react-native-dev-menu] D:\Projects\testapp2\node_modules\react-native-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:react-native:0.70.6] C:\Users\Dex\.gradle\caches\transforms-3\7e4cdfa6ee92a1ba12bd837c8fca8b08\transformed\jetified-react-native-0.70.6-debug\AndroidManifest.xml:2:1-11:12
@@ -401,6 +402,8 @@ MERGED from [:react-native-share] D:\Projects\testapp2\node_modules\react-native
 MERGED from [:react-native-share] D:\Projects\testapp2\node_modules\react-native-share\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-svg] D:\Projects\testapp2\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-svg] D:\Projects\testapp2\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-vector-icons] D:\Projects\testapp2\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-vector-icons] D:\Projects\testapp2\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-webview] D:\Projects\testapp2\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-webview] D:\Projects\testapp2\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-dev-menu] D:\Projects\testapp2\node_modules\react-native-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41

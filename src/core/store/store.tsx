@@ -8,6 +8,9 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import {setLanguage} from "~/common/localization/localization";
 import {createLogger, ReduxLoggerOptions} from "redux-logger";
 import {loginApi} from "~/api/auth";
+import {cafeApi} from "~/api/cafe";
+import {drinkApi} from "~/api/drink";
+import {favoriteApi} from "~/api/favorite";
 
 const persistConfig: PersistConfig<RootState> = {
   key: "root",
@@ -32,6 +35,9 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) => getDefaultMiddleware({serializableCheck: false,})
       .concat(logger)
       .concat(loginApi.middleware)
+      .concat(cafeApi.middleware)
+      .concat(drinkApi.middleware)
+      .concat(favoriteApi.middleware)
 });
 
 export const persistor = persistStore(

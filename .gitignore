@@ -1,0 +1,9 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+
+/node_modules
+/android/app/build/outputs/apk/dev/debug/app-dev-debug.apk
+/android/app/build/outputs/apk/qa/debug/app-qa-debug.apk
