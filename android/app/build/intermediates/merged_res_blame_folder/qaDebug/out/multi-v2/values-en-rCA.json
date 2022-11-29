@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.testapp2.app-mergeQaDebugResources-40:/values-en-rCA/values-en-rCA.xml",
+            "outputFile": "com.testapp2.app-mergeQaDebugResources-43:/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Dex\\.gradle\\caches\\transforms-3\\cd4f5c9420a001c4ed2e097b375605e2\\transformed\\core-1.7.0\\res\\values-en-rCA\\values-en-rCA.xml",

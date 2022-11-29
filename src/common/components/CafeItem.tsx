@@ -6,11 +6,12 @@ import {navigation} from "~/services";
 import {Pages} from "~/navigation/pages";
 import {Fonts} from "~/core/theme/fonts";
 
-interface CafeItemProps {
+export interface CafeItemProps {
     cafeData: IcafeData;
 }
 
 export interface IcafeData {
+    map(arg0: (i: IcafeData) => JSX.Element): React.ReactNode;
     id: string;
     name: string;
     address: string;

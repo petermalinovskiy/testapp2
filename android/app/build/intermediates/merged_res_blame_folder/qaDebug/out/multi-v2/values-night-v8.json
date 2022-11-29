@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.testapp2.app-mergeQaDebugResources-40:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.testapp2.app-mergeQaDebugResources-43:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
                     "source": "D:\\Projects\\testapp2\\node_modules\\@react-native-community\\datetimepicker\\android\\build\\intermediates\\packaged_res\\debug\\values-night-v8\\values-night-v8.xml",

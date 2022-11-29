@@ -37,6 +37,8 @@ import com.ibits.react_native_in_app_review.AppReviewPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
 // react-native-localize
 import com.zoontek.rnlocalize.RNLocalizePackage;
+// react-native-maps
+import com.airbnb.android.react.maps.MapsPackage;
 // react-native-navigation
 import com.reactnativenavigation.react.NavigationPackage;
 // react-native-orientation-locker
@@ -113,6 +115,7 @@ public class PackageList {
       new AppReviewPackage(),
       new LinearGradientPackage(),
       new RNLocalizePackage(),
+      new MapsPackage(),
       new NavigationPackage(reactNativeHost),
       new OrientationPackage(),
       new RNPermissionsPackage(),

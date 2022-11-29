@@ -29,10 +29,17 @@ export const Login: NavigationFunctionComponent = (): JSX.Element => {
 
     console.log(user);
 
-    const [login] = useLazyLoginQuery();
+    const [login, {isFetching}] = useLazyLoginQuery();
 
     const onSubmit = useCallback(async (data: {email: string; password: string}) => {
-        await login(data).unwrap();
+        const accessToken = await login(data).unwrap();
+        console.log(accessToken);
+        do{
+            if (accessToken) {
+                console.log('pressed')
+                navigation.setRoot(getTabsRootLayout("light"));
+            }
+        } while (!isloading)
     },[login]);
 
     const onPress = async () => {
@@ -42,7 +49,7 @@ export const Login: NavigationFunctionComponent = (): JSX.Element => {
             console.log('pressed')
             navigation.setRoot(getTabsRootLayout("light"));
         }
-    }
+    };
 
     return (
         <View style={CommonStyles.flex1}>

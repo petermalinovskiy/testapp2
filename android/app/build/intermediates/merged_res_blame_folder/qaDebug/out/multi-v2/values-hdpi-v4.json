@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.testapp2.app-mergeQaDebugResources-40:/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "com.testapp2.app-mergeQaDebugResources-43:/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Dex\\.gradle\\caches\\transforms-3\\fbb6128104153038c3c2db9001803e80\\transformed\\appcompat-1.4.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",

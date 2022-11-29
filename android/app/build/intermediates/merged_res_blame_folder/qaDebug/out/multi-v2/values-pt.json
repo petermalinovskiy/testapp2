@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.testapp2.app-mergeQaDebugResources-40:/values-pt/values-pt.xml",
+            "outputFile": "com.testapp2.app-mergeQaDebugResources-43:/values-pt/values-pt.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Dex\\.gradle\\caches\\transforms-3\\fbb6128104153038c3c2db9001803e80\\transformed\\appcompat-1.4.1\\res\\values-pt\\values-pt.xml",
