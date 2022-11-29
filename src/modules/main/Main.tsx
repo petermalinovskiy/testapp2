@@ -48,6 +48,12 @@ export const Main: NavigationFunctionComponent = (): JSX.Element => {
   );
 };
 
+Main.options = {
+    bottomTabs: {
+        visible: false
+    }
+}
+
 const styles = StyleSheet.create({
     root: {
         flex: 1,

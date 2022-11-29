@@ -106,7 +106,6 @@ export const bottomTabsLayout = (iconSet: ITabBarIconSet, colors: ThemeColors): 
         options: {
           bottomTabs: {
             visible: false,
-            drawBehind: true
           },
           topBar: {
             visible: true,
