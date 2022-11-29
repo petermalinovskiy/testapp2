@@ -28,10 +28,10 @@ export const LikeButton: React.FC<LikeButtonProps> = ({favorite, id, size}) => {
         console.log('pressed')
         if (favoriteStatus) {
             await unsetFavoriteDrink(drinkItem)
-                .then(() => isSetError ? null : setFavorite(prev => !prev) )
+                .then(() => isUnsetError ? null : setFavorite(prev => !prev) )
         } else {
             await setFavoriteDrink(drinkItem)
-                .then(() => isUnsetError ? null : setFavorite(prev => !prev) )
+                .then(() => isSetError ? null : setFavorite(prev => !prev) )
         }
     }
 

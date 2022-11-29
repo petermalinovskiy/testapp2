@@ -7,8 +7,6 @@ import {DrinkItem} from "~/common/components/DrinkItem";
 
 export const Favorite = (): JSX.Element => {
     const token = useAppSelector((store) => store.login.accessToken);
-
-
     const {data} = useGetFavoriteDrinkListQuery(token);
     console.log(data)
 

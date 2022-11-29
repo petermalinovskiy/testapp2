@@ -24,7 +24,10 @@ export const Map: React.FC<CafeItemProps> = (props) => {
                 }}>
                 {props ?
                     props.cafeData.map((i: IcafeData) => (
-                    <Marker coordinate={coordinatesToObject(i.coordinates)}/>
+                    <Marker
+                        coordinate={coordinatesToObject(i.coordinates)}
+                        key={i.id}
+                    />
                 )) : null}
 
             </MapView>
