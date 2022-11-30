@@ -7,3 +7,7 @@
 /node_modules
 /android/app/build/outputs/apk/dev/debug/app-dev-debug.apk
 /android/app/build/outputs/apk/qa/debug/app-qa-debug.apk
+
+# Pods
+/ios/Pods
+/ios/Podfile.lock
